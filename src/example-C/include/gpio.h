@@ -11,6 +11,12 @@ extern "C" {
 
 void GPIO_init(void);
 
+void GPIO_LED_Toggle(void);
+
+void GPIO_LED_On(void);
+
+void GPIO_LED_Off(void);
+
 #ifdef __cplusplus
 }
 #endif

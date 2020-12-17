@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.7)
-project(test)
+project(test C CXX ASM)
 set(CMAKE_CXX_STANDARD 11)
 message(STATUS "Build PROJECT_NAME: ${PROJECT_NAME}")
 set(PACKAGE_MAJOR 0)
