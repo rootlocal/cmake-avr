@@ -1,0 +1,22 @@
+find_program(AVR_CC avr-gcc)
+find_program(AVR_CXX avr-g++)
+
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_C_COMPILER ${AVR_CC})
+set(CMAKE_CXX_COMPILER ${AVR_CXX})
+set(CMAKE_SYSTEM_PROCESSOR avr)
+
+set(CSTANDARD "-std=gnu99")
+set(CDEBUG "-gstabs")
+set(CWARN "-Wall -Wstrict-prototypes")
+set(CTUNING "-funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums")
+set(COPT "-Os")
+set(CMCU "-mmcu=atmega32")
+set(CDEFS "-DF_CPU=12000000UL")
+
+set(CFLAGS "${CMCU} ${CDEBUG} ${CDEFS} ${CINCS} ${COPT} ${CWARN} ${CSTANDARD} ${CEXTRA}")
+set(CXXFLAGS "${CMCU} ${CDEFS} ${CINCS} ${COPT}")
+set(CMAKE_C_FLAGS ${CFLAGS})
+set(CMAKE_CXX_FLAGS ${CXXFLAGS})
+set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
+set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
